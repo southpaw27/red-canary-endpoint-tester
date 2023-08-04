@@ -80,7 +80,6 @@ func logNetworkActivity(source string, destination string, dataAmount int64, pro
 
 // Print the logs to file
 func logsToFile(args Arguments) {
-	fmt.Println(globalLog)
 	jsonData, err := json.MarshalIndent(globalLog, "", "  ")
 	if err != nil {
 		fmt.Println("Error marshaling global log to JSON", err)
