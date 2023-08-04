@@ -43,5 +43,11 @@ func startProcess(args Arguments) {
 		fmt.Println("Error:", err)
 		return
 	}
+
+	err = cmd.Wait()
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
+
 	logProcess(&processProfile)
 }
