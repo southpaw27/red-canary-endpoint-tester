@@ -23,9 +23,9 @@ type Arguments struct {
 // Define and parse the flags into a centralized struct
 func collectFlags(args *Arguments) {
 	flag.StringVar(&args.endpoint, "ep", "", "The endpoint to connect and send data to")
-	flag.StringVar(&args.execArgs, "ea", "", "Arguments to run the exec in '-arg1=123|-arg2=456' form separated by a pipe")
+	flag.StringVar(&args.execArgs, "ea", "", "Arguments to run the executable defined in -ef in '-arg1=123|-arg2=456' form separated by a pipe")
 	flag.StringVar(&args.execFilePath, "ef", "", "exec file path to run")
-	flag.StringVar(&args.filepath, "fp", "", "The filepath")
+	flag.StringVar(&args.filepath, "fp", "", "The filepath to create/update/delete")
 	flag.StringVar(&args.fileString, "fs", "", "The string to add to a file")
 	flag.StringVar(&args.logFile, "lf", "./logFile.json", "The file path to send logs to")
 
